@@ -1,3 +1,16 @@
+"
+"参考
+"https://qiita.com/mfujimori/items/9fd41bcd8d1ce9170301
+"
+"
+"
+"
+"
+"
+
+
+
+
 " setting
 "文字コードをUFT-8に設定
 set fenc=utf-8
