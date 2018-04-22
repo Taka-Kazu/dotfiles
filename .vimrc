@@ -102,7 +102,9 @@ set smartindent
 " 開行時に前の行のインデントを継続する
 set autoindent
 " 貼付け時tabを入れない
-set paste
+"set paste
+" ペーストモード解除
+"autocmd InsertLeave * set nopaste
 
 
 
