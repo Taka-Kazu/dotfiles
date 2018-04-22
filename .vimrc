@@ -6,6 +6,7 @@
 "
 "
 "
+" source ~/.vimcnk/vimrc
 "
 
 
@@ -48,7 +49,6 @@ set clipboard=unnamed,autoselect
 set gdefault
 " 保存時に行末の空白を削除する
 autocmd BufWritePre * :%s/\s\+$//ge
-
 
 " 表示系
 " カラースキーマ
@@ -101,6 +101,9 @@ set shiftwidth=2
 set smartindent
 " 開行時に前の行のインデントを継続する
 set autoindent
+" 貼付け時tabを入れない
+set paste
+
 
 
 " 検索系
