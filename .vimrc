@@ -128,4 +128,17 @@ augroup MyXML
   autocmd!
   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype launch inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype urdf inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype xacro inoremap <buffer> </ </<C-x><C-o>
+augroup END
+
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
+
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
 augroup END
