@@ -6,6 +6,7 @@
 "
 "
 "
+" source ~/.vimcnk/vimrc
 "
 
 
@@ -48,7 +49,6 @@ set clipboard=unnamed,autoselect
 set gdefault
 " 保存時に行末の空白を削除する
 autocmd BufWritePre * :%s/\s\+$//ge
-
 
 " 表示系
 " カラースキーマ
@@ -101,6 +101,11 @@ set shiftwidth=4
 set smartindent
 " 開行時に前の行のインデントを継続する
 set autoindent
+" 貼付け時tabを入れない
+"set paste
+" ペーストモード解除
+"autocmd InsertLeave * set nopaste
+
 
 
 " 検索系
@@ -126,4 +131,14 @@ augroup MyXML
   autocmd Filetype launch inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype urdf inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype xacro inoremap <buffer> </ </<C-x><C-o>
+augroup END
+
+if has('persistent_undo')
+  set undodir=~/.vim/undo
+  set undofile
+endif
+
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
 augroup END
