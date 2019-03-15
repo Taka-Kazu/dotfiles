@@ -85,7 +85,7 @@ set scrolloff=3
 "set spell
 "set spelllang=en,cjk "日本語を除外
 " 折りたたみ
-set foldmethod=indent
+" set foldmethod=indent
 
 
 " Tab系
@@ -94,9 +94,9 @@ set list listchars=tab:\▸\-
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
-set tabstop=2
+set tabstop=4
 " 行頭でのTab文字の表示幅
-set shiftwidth=2
+set shiftwidth=4
 " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 set smartindent
 " 開行時に前の行のインデントを継続する
@@ -123,4 +123,7 @@ augroup MyXML
   autocmd!
   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype launch inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype urdf inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype xacro inoremap <buffer> </ </<C-x><C-o>
 augroup END
