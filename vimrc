@@ -3,13 +3,46 @@
 "https://qiita.com/mfujimori/items/9fd41bcd8d1ce9170301
 "https://qiita.com/iwaseasahi/items/0b2da68269397906c14c
 "https://qiita.com/KeitaNakamura/items/a289822827c8655b2dcd
-"
-"
-"
-" source ~/.vimcnk/vimrc
+"https://qiita.com/delphinus/items/00ff2c0ba972c6e41542
 "
 
+" dein
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END
 
+if &compatible
+  set nocompatible
+endif
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+"call dein#add('Shougo/dein.vim')
+"call dein#add('tomtom/t_comment_vim')
+"call dein#add('tomasr/molokai')
+"call map(dein#check_clean(), "delete(v:val, 'rf')")
+"call dein#recache_runtimepath()
+
+if dein#load_state(expand('~/.vim/dein'))
+    call dein#begin(expand('~/.vim/dein'))
+
+    let g:dein_dir = expand('~/dotfiles')
+    let s:toml = g:dein_dir . '/dein.toml'
+    let s:lazy_toml = g:dein_dir . '/dein_lazy.toml'
+
+    " TOMLファイルにpluginを記述
+    call dein#load_toml(s:toml, {'lazy': 0})
+    call dein#load_toml(s:lazy_toml, {'lazy': 1})
+
+    call dein#end()
+    call dein#save_state()
+endif
+
+" 未インストールを確認
+if dein#check_install()
+    call dein#install()
+endif
+
+filetype plugin indent on
 
 
 " 基本設定系
@@ -52,7 +85,8 @@ autocmd BufWritePre * :%s/\s\+$//ge
 
 " 表示系
 " カラースキーマ
-"colorscheme molokai
+colorscheme molokai
+set t_Co=256
 " 行番号を表示
 set number
 " タイトルを表示
@@ -106,8 +140,6 @@ set autoindent
 " ペーストモード解除
 "autocmd InsertLeave * set nopaste
 
-
-
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set ignorecase
@@ -122,23 +154,7 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
-
-" HTML/XML閉じタグ自動補完
-augroup MyXML
-  autocmd!
-  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
-  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
-  autocmd Filetype launch inoremap <buffer> </ </<C-x><C-o>
-  autocmd Filetype urdf inoremap <buffer> </ </<C-x><C-o>
-  autocmd Filetype xacro inoremap <buffer> </ </<C-x><C-o>
-augroup END
-
 if has('persistent_undo')
   set undodir=~/.vim/undo
   set undofile
 endif
-
-augroup vimrcEx
-  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
-  \ exe "normal g`\"" | endif
-augroup END
