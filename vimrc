@@ -74,6 +74,12 @@ set whichwrap=b,s,h,l,<,>,[,],~
 nnoremap j gj
 nnoremap k gk
 
+" ウィンドウ分割
+nnoremap vs vsplit
+nnoremap wl <C-w>l
+nnoremap wh <C-w>h
+nnoremap wk <C-w>k
+nnoremap wj <C-w>j
 
 " 編集系
 " ヤンクでクリップボードにコピー
