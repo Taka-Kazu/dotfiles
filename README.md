@@ -1,4 +1,5 @@
 # dotfiles
 ## installation
-git clone https://github.com/<your account>/dotfiles.git  
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+git clone https://github.com/taka-kazu/dotfiles.git  
+cd dotfiles
+./install.sh
