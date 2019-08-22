@@ -1,0 +1,15 @@
+defutf8 on
+defencoding utf8
+encoding utf8 utf8
+
+escape ^Tt
+
+altscreen on
+
+autodetach on
+
+startup_message off
+
+defscrollback 10000000
+
+hardstatus alwayslastline "%{= cd} %-w%{= wk} %n %t* %{-}%+w %= LoadAVG [%l] "

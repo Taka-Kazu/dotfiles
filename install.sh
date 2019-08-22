@@ -2,6 +2,7 @@
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
+echo "setting vim"
 git clone https://github.com/Shougo/dein.vim.git ~/.vim/dein/repos/github.com/Shougo/dein.vim
 vim_version=`vim --version | grep -o '[0-9]*'`
 vim_version=${vim_version:0:1}
@@ -20,3 +21,7 @@ mkdir ~/.vim/undo
 echo "source $SCRIPT_DIR/vimrc" >> ~/.vimrc
 
 echo "open vim and run ':call dein#install()'"
+echo "setting vim end"
+
+echo "setting screen"
+echo "setting screen end"
