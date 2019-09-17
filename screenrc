@@ -2,7 +2,7 @@ defutf8 on
 defencoding utf8
 encoding utf8 utf8
 
-escape ^Tt
+# escape ^Tt
 
 altscreen on
 
