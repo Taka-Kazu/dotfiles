@@ -73,6 +73,8 @@ set whichwrap=b,s,h,l,<,>,[,],~
 " 折り返し時に表示行単位での移動できるようにする
 nnoremap j gj
 nnoremap k gk
+" 行をまたいだbackspace
+set backspace=indent,eol,start
 
 " ウィンドウ分割
 nnoremap vs vsplit
