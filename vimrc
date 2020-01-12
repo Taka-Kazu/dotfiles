@@ -166,3 +166,18 @@ if has('persistent_undo')
   set undodir=~/.vim/undo
   set undofile
 endif
+
+" nerdtree
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" vim-airline
+let g:airline_theme = 'molokai'
+let g:airline_section_a = airline#section#create(['mode', 'crypt'])
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+augroup cpp-path
+    autocmd!
+    autocmd FileType cpp setlocal path=.,/usr/include,/usr/local/include
+augroup END

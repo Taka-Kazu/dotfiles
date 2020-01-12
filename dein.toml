@@ -2,7 +2,31 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
 repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
-repo = 'tomasr/molokai'
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
