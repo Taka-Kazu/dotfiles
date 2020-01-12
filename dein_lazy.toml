@@ -1,1 +1,3 @@
 # dein_lazy.toml
+[[plugins]]
+repo = 'dense-analysis/ale'

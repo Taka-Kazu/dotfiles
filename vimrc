@@ -181,3 +181,16 @@ augroup cpp-path
     autocmd!
     autocmd FileType cpp setlocal path=.,/usr/include,/usr/local/include
 augroup END
+
+" ale
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_sign_colmun_always = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_echo_cursor = 0
+let g:ale_open_list = 1
+let g:ale_keep_list_window_open = 0
+let g:ale_list_window_size = 3
+let g:airline#extensions#ale#enabled = 1
