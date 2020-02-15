@@ -124,8 +124,8 @@ syntax on
 " スクロール余裕
 set scrolloff=3
 " スペルチェック
-set spell
-set spelllang=en,cjk "日本語を除外
+" set spell
+" set spelllang=en,cjk "日本語を除外
 " 折りたたみ
 " set foldmethod=indent
 
