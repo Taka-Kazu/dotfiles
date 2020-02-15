@@ -20,8 +20,21 @@ mkdir ~/.vim/undo
 
 echo "source $SCRIPT_DIR/vimrc" >> ~/.vimrc
 
+echo "installing powerline font"
+git clone https://github.com/powerline/fonts.git --depth=1 /tmp/powerline_fonts \
+&& cd /tmp/powerline_fonts \
+&& ./install.sh
+
+echo "==="
+echo "please set your terminal font as 'Ubuntu Mono derivative Powerline Regular'"
+echo "==="
+
 echo "open vim and run ':call dein#install()'"
 echo "setting vim end"
 
 echo "setting screen"
 echo "setting screen end"
+
+echo "setting tmux"
+# echo "source $SCRIPT_DIR/tmux.conf" >> ~/.tmux.conf
+echo "setting tmux end"
