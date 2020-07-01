@@ -42,3 +42,7 @@ echo "setting tmux end"
 echo "setting inputrc"
 cat $SCRIPT_DIR/inputrc >> ~/.inputrc
 echo "setting inputrc end"
+
+echo "setting bash_aliases"
+echo "source $SCRIPT_DIR/bash_aliases" >> ~/.bash_aliases
+echo "setting bash_aliases end"
