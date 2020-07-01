@@ -36,7 +36,7 @@ echo "setting screen"
 echo "setting screen end"
 
 echo "setting tmux"
-# echo "source $SCRIPT_DIR/tmux.conf" >> ~/.tmux.conf
+echo "source $SCRIPT_DIR/tmux.conf" >> ~/.tmux.conf
 echo "setting tmux end"
 
 echo "setting inputrc"
