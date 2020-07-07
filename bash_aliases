@@ -23,3 +23,11 @@ function format_c()
 
 alias git_log="git log --all --graph --decorate"
 
+function cb()
+{
+    dir=$PWD
+    cd ~/ros2_ws
+    colcon build $@ --symlink-install
+    . install/local_setup.bash
+    cd $dir
+}
