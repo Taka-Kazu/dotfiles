@@ -4,7 +4,7 @@ function cmk()
 {
     dir=$PWD
     cd ~/catkin_ws
-    catkin_make $@
+    catkin build $@ -DCMAKE_BUILD_TYPE=Release
     cd $dir
 }
 
@@ -27,7 +27,11 @@ function cb()
 {
     dir=$PWD
     cd ~/ros2_ws
-    colcon build $@ --symlink-install
+    if [ $# -gt 0 ]; then
+        colcon build --packages-select $1 --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+    else
+        colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+    fi
     . install/local_setup.bash
     cd $dir
 }
