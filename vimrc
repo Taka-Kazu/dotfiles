@@ -64,6 +64,8 @@ set showcmd
 set nowritebackup
 " マウス操作有効化
 "set mouse=a
+" ファイル末尾に改行を追加
+set eol
 
 " 操作系
 " insertモードでjjをESCとして扱う
