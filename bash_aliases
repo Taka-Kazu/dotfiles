@@ -10,7 +10,7 @@ function cmk()
 
 function search()
 {
-  grep $@ -sIrnC 1 .
+  grep "$@" -sIrnC 1 .
 }
 
 function format_c()
