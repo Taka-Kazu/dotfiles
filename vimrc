@@ -173,12 +173,12 @@ endif
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " vim-airline
-let g:airline_theme = 'molokai'
-let g:airline_powerline_fonts = 1
-let g:airline_section_a = airline#section#create(['mode', 'crypt'])
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+" let g:airline_theme = 'molokai'
+" let g:airline_powerline_fonts = 1
+" let g:airline_section_a = airline#section#create(['mode', 'crypt'])
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#buffer_idx_mode = 1
+" let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
@@ -199,4 +199,4 @@ let g:ale_echo_cursor = 0
 let g:ale_open_list = 1
 let g:ale_keep_list_window_open = 0
 let g:ale_list_window_size = 3
-let g:airline#extensions#ale#enabled = 1
+" let g:airline#extensions#ale#enabled = 1
