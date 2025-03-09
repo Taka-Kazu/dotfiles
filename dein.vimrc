@@ -3,10 +3,10 @@
 set nocompatible
 
 " Set Dein base path (required)
-let s:dein_base = '/home/ktakahashi/.cache/dein'
+let s:dein_base = '~/.cache/dein'
 
 " Set Dein source path (required)
-let s:dein_src = '/home/ktakahashi/.cache/dein/repos/github.com/Shougo/dein.vim'
+let s:dein_src = '~/.cache/dein/repos/github.com/Shougo/dein.vim'
 
 " Set Dein runtime path (required)
 execute 'set runtimepath+=' . s:dein_src
