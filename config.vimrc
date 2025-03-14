@@ -48,7 +48,7 @@ nnoremap vs vsplit
 
 " 編集系
 " ヤンクでクリップボードにコピー
-set clipboard=unnamed,autoselect
+set clipboard=unnamedplus
 " 常にglobal
 set gdefault
 " 保存時に行末の空白を削除する
